@@ -12,6 +12,7 @@ button {
   border: none;
   padding: 6px 28px;
   gap: 10px;
+  display: flex;
 }
 
 
@@ -97,6 +98,7 @@ button {
 .tertiary:disabled{
   border: 1px solid var(--primary-900, #382766);
   color: rgba(56, 39, 102, 1);
+
 }
 
 
@@ -129,8 +131,28 @@ a.disabledLink {
 
 .primary:active, .secondary:active, .tertiary:active{
   transform: translateY(-2px);
+
 }
+.primary:disabled, .secondary:disabled, .tertiary:disabled{
+  transform: none;
+  cursor: not-allowed;
+}
+
+.primary:disabled .styleIcon {
+  fill: var(--color-light-900)
+}
+
+.secondary:disabled .styleIcon {
+  fill: var(--color-light-900)
+}
+
+.styleIcon {
+  fill: var(--color-light-100);
+}
+
 
 .fullWidth {
   width: 100%;
 }
+
+

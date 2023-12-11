@@ -3,6 +3,6 @@ import {IconComponent} from "@/components/commonComponents/IconComponent/IconCom
 
 export function App() {
   return <div style={{width: '300px', height: '300px', backgroundColor:'green'}}>
-    <IconComponent name={'enterIcon'} ></IconComponent>
+    <IconComponent size={16} name={'enterIcon'} ></IconComponent>
   </div>
 }
