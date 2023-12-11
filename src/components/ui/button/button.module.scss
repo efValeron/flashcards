@@ -15,51 +15,47 @@ button {
   display: flex;
 }
 
-
-
 .primary {
-  background: var(--primary-500, #8C61FF);
+  background: var(--primary-500, #8c61ff);
   box-shadow: 0px 4px 18px 0px rgba(140, 97, 255, 0.35);
-  color: var(--color-light-100)
+  color: var(--color-light-100);
 }
 
-.primary:hover{
-  background: var(--primary-300, #A280FF);
+.primary:hover {
+  background: var(--primary-300, #a280ff);
   box-shadow: 0px 4px 18px 0px rgba(140, 97, 255, 0.35);
 }
 
 .primary:focus-visible {
-  border: 2px solid var(--info-700, #2F68CC);
-  background: var(--primary-500, #8C61FF);
+  border: 2px solid var(--info-700, #2f68cc);
+  background: var(--primary-500, #8c61ff);
   box-shadow: 0px 4px 18px 0px rgba(140, 97, 255, 0.35);
-
 }
 
 .primary:active {
-  background: var(--primary-700, #704ECC);
+  background: var(--primary-700, #704ecc);
   box-shadow: 0px 4px 18px 0px rgba(140, 97, 255, 0.35);
-
 }
 
-.primary:disabled{
+.primary:disabled {
   background: var(--primary-900, #382766);
   box-shadow: 0px 4px 18px 0px rgba(140, 97, 255, 0.35);
   color: var(--color-light-900);
 }
 
 .secondary {
-  background: var(--dark-300, #4C4C4C);
+  background: var(--dark-300, #4c4c4c);
   box-shadow: 0px 2px 10px 0px rgba(109, 109, 109, 0.25);
-  color: var(--light-100, #FFF);
+  color: var(--light-100, #fff);
 }
 
-.secondary:hover{
+.secondary:hover {
   background: var(--dark-100, #808080);
   box-shadow: 0px 2px 10px 0px rgba(109, 109, 109, 0.25);
 }
-.secondary:focus-visible{
-  border: 2px solid var(--info-700, #2F68CC);
-  background: var(--dark-300, #4C4C4C);
+.secondary:focus-visible {
+  border: 2px solid var(--info-700, #2f68cc);
+  background: var(--dark-300, #4c4c4c);
   box-shadow: 0px 2px 10px 0px rgba(109, 109, 109, 0.25);
 }
 
@@ -68,60 +64,54 @@ button {
   box-shadow: 0px 2px 10px 0px rgba(109, 109, 109, 0.25);
 }
 
-.secondary:disabled{
-  background: var(--dark-300, #4C4C4C);
+.secondary:disabled {
+  background: var(--dark-300, #4c4c4c);
   box-shadow: 0px 2px 10px 0px rgba(109, 109, 109, 0.25);
   color: var(--color-light-900);
 }
 
 .tertiary {
-  border: 1px solid var(--primary-500, #8C61FF);
-  color: var(--primary-500, #8C61FF)
+  border: 1px solid var(--primary-500, #8c61ff);
+  color: var(--primary-500, #8c61ff);
 }
-.tertiary:hover{
-  border: 1px solid var(--primary-700, #704ECC);
+.tertiary:hover {
+  border: 1px solid var(--primary-700, #704ecc);
   background: var(--dark-500, #333);
 }
 
 .tertiary:focus-visible {
-  border: 2px solid var(--info-700, #2F68CC);
-
+  border: 2px solid var(--info-700, #2f68cc);
 }
 
 .tertiary:active {
-  border: 1px solid var(--primary-700, #704ECC);
+  border: 1px solid var(--primary-700, #704ecc);
   background: var(--primary-900, #382766);
-
 }
 
-
-.tertiary:disabled{
+.tertiary:disabled {
   border: 1px solid var(--primary-900, #382766);
   color: rgba(56, 39, 102, 1);
-
 }
 
-
-
 a.link {
-  color: var(--primary-500, #8C61FF);
+  color: var(--primary-500, #8c61ff);
   font-size: 16px;
   padding: 6px 0px;
   cursor: pointer;
   text-decoration: none;
+  outline: none;
 }
-.link:focus-visible{
+.link:focus-visible {
   border-radius: 130px;
-  border: 2px solid var(--info-700, #2F68CC);
-
+  border: 2px solid var(--info-700, #2f68cc);
 }
 
-a.link:active{
-  color: var(--primary-700, #704ECC);
+a.link:active {
+  color: var(--primary-700, #704ecc);
 }
 
-.link:hover{
-  color: var(--primary-300, #A280FF);
+.link:hover {
+  color: var(--primary-300, #a280ff);
 }
 
 a.disabledLink {
@@ -129,30 +119,30 @@ a.disabledLink {
   color: var(--primary-900, #382766);
 }
 
-.primary:active, .secondary:active, .tertiary:active{
+.primary:active,
+.secondary:active,
+.tertiary:active {
   transform: translateY(-2px);
-
 }
-.primary:disabled, .secondary:disabled, .tertiary:disabled{
+.primary:disabled,
+.secondary:disabled,
+.tertiary:disabled {
   transform: none;
   cursor: not-allowed;
 }
 
 .primary:disabled .styleIcon {
-  fill: var(--color-light-900)
+  fill: var(--color-light-900);
 }
 
 .secondary:disabled .styleIcon {
-  fill: var(--color-light-900)
+  fill: var(--color-light-900);
 }
 
 .styleIcon {
   fill: var(--color-light-100);
 }
 
-
 .fullWidth {
   width: 100%;
 }
-
-

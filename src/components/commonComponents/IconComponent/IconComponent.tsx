@@ -1,20 +1,21 @@
-import { createElement, CSSProperties, FC } from 'react'
-import {IconName} from "@/components/commonComponents/IconComponent/types";
-import allIcons from "@/components/commonComponents/IconComponent/allIcons";
+import { CSSProperties, FC, createElement } from 'react'
+
+import allIcons from '@/components/commonComponents/IconComponent/allIcons'
+import { IconName } from '@/components/commonComponents/IconComponent/types'
 
 interface IProps {
-    id?: string
-    size?: number
-    name: IconName
-    className?: string
-    svgProp?: React.SVGProps<SVGSVGElement>
-    style?: CSSProperties
+  className?: string
+  id?: string
+  name: IconName
+  size?: number
+  style?: CSSProperties
+  svgProp?: React.SVGProps<SVGSVGElement>
 }
-export const IconComponent: FC<IProps> = ({ id, name, size = 24, className, style }) =>
-    createElement(allIcons[name], {
-        id,
-        width: size,
-        height: size,
-        className,
-        style,
-    })
+export const IconComponent: FC<IProps> = ({ className, id, name, size = 24, style }) =>
+  createElement(allIcons[name], {
+    className,
+    height: size,
+    id,
+    style,
+    width: size,
+  })

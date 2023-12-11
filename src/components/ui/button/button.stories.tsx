@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
+
+import { IconComponent } from '@/components/commonComponents/IconComponent/IconComponent'
+
 import s from '@/components/ui/button/button.module.scss'
 
 import { Button } from './'
-import {IconComponent} from "@/components/commonComponents/IconComponent/IconComponent";
 
 const meta = {
   argTypes: {
@@ -12,15 +14,15 @@ const meta = {
     },
   },
   component: Button,
+  decorators: [
+    Story => (
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Story />
+      </div>
+    ),
+  ],
   tags: ['autodocs'],
   title: 'Components/Button',
-  decorators: [
-    (Story) => (
-        <div style={{display: 'flex', justifyContent: 'center'}}>
-          <Story />
-        </div>
-    )
-  ]
 } satisfies Meta<typeof Button>
 
 export default meta
@@ -36,19 +38,19 @@ export const Primary: Story = {
 
 export const PrimaryWithIcon = () => {
   return (
-      <Button variant={"primary"} disabled={false} >
-        <IconComponent name={'enterIcon'} className={s.styleIcon} size={16} />
-        Button primary
-      </Button>
+    <Button disabled={false} variant={'primary'}>
+      <IconComponent className={s.styleIcon} name={'enterIcon'} size={16} />
+      Button primary
+    </Button>
   )
 }
 
 export const DisabledPrimaryWithIcon = () => {
   return (
-      <Button variant={"primary"} disabled={true} >
-        <IconComponent name={'enterIcon'} className={s.styleIcon} size={16} />
-        Button primary
-      </Button>
+    <Button disabled variant={'primary'}>
+      <IconComponent className={s.styleIcon} name={'enterIcon'} size={16} />
+      Button primary
+    </Button>
   )
 }
 export const Secondary: Story = {
@@ -61,10 +63,10 @@ export const Secondary: Story = {
 
 export const SecondaryWithIcon = () => {
   return (
-      <Button variant={'secondary'} as={'button'}>
-        <IconComponent name={"enterIcon"} className={s.styleIcon} size={16}/>
-        Button Secondary
-      </Button>
+    <Button as={'button'} variant={'secondary'}>
+      <IconComponent className={s.styleIcon} name={'enterIcon'} size={16} />
+      Button Secondary
+    </Button>
   )
 }
 
@@ -84,15 +86,15 @@ export const Link: Story = {
     variant: 'link',
   },
 }
-export  const LinkDisabled: Story = {
+export const LinkDisabled: Story = {
   args: {
     as: 'a',
     children: 'Link-disabled',
+    className: s.disabledLink,
     disabled: false,
     href: 'https://google.com',
     variant: 'link',
-    className: s.disabledLink
-  }
+  },
 }
 export const FullWidth: Story = {
   args: {
@@ -102,4 +104,3 @@ export const FullWidth: Story = {
     variant: 'primary',
   },
 }
-
