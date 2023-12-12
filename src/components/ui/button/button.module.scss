@@ -1,88 +1,82 @@
 button {
   all: unset;
-
   cursor: pointer;
-
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-
-  padding: 6px 28px;
-
-  font-size: 14px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 24px;
-
-  border: none;
-  border-radius: 4px;
   outline: none;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  border: none;
+  padding: 6px 28px;
+  gap: 10px;
+  display: flex;
 }
 
 .primary {
-  color: var(--color-light-100);
   background: var(--primary-500, #8c61ff);
-  box-shadow: 0 4px 18px 0 rgb(140 97 255 / 35%);
+  box-shadow: 0px 4px 18px 0px rgba(140, 97, 255, 0.35);
+  color: var(--color-light-100);
 }
 
 .primary:hover {
   background: var(--primary-300, #a280ff);
-  box-shadow: 0 4px 18px 0 rgb(140 97 255 / 35%);
+  box-shadow: 0px 4px 18px 0px rgba(140, 97, 255, 0.35);
 }
 
 .primary:focus-visible {
-  background: var(--primary-500, #8c61ff);
   border: 2px solid var(--info-700, #2f68cc);
-  box-shadow: 0 4px 18px 0 rgb(140 97 255 / 35%);
+  background: var(--primary-500, #8c61ff);
+  box-shadow: 0px 4px 18px 0px rgba(140, 97, 255, 0.35);
 }
 
 .primary:active {
   background: var(--primary-700, #704ecc);
-  box-shadow: 0 4px 18px 0 rgb(140 97 255 / 35%);
+  box-shadow: 0px 4px 18px 0px rgba(140, 97, 255, 0.35);
 }
 
 .primary:disabled {
-  color: var(--color-light-900);
   background: var(--primary-900, #382766);
-  box-shadow: 0 4px 18px 0 rgb(140 97 255 / 35%);
+  box-shadow: 0px 4px 18px 0px rgba(140, 97, 255, 0.35);
+  color: var(--color-light-900);
 }
 
 .secondary {
-  color: var(--light-100, #fff);
   background: var(--dark-300, #4c4c4c);
-  box-shadow: 0 2px 10px 0 rgb(109 109 109 / 25%);
+  box-shadow: 0px 2px 10px 0px rgba(109, 109, 109, 0.25);
+  color: var(--light-100, #fff);
 }
 
 .secondary:hover {
   background: var(--dark-100, #808080);
-  box-shadow: 0 2px 10px 0 rgb(109 109 109 / 25%);
+  box-shadow: 0px 2px 10px 0px rgba(109, 109, 109, 0.25);
 }
-
 .secondary:focus-visible {
-  background: var(--dark-300, #4c4c4c);
   border: 2px solid var(--info-700, #2f68cc);
-  box-shadow: 0 2px 10px 0 rgb(109 109 109 / 25%);
+  background: var(--dark-300, #4c4c4c);
+  box-shadow: 0px 2px 10px 0px rgba(109, 109, 109, 0.25);
 }
 
 .secondary:active {
   background: var(--dark-500, #333);
-  box-shadow: 0 2px 10px 0 rgb(109 109 109 / 25%);
+  box-shadow: 0px 2px 10px 0px rgba(109, 109, 109, 0.25);
 }
 
 .secondary:disabled {
-  color: var(--color-light-900);
   background: var(--dark-300, #4c4c4c);
-  box-shadow: 0 2px 10px 0 rgb(109 109 109 / 25%);
+  box-shadow: 0px 2px 10px 0px rgba(109, 109, 109, 0.25);
+  color: var(--color-light-900);
 }
 
 .tertiary {
-  color: var(--primary-500, #8c61ff);
   border: 1px solid var(--primary-500, #8c61ff);
+  color: var(--primary-500, #8c61ff);
 }
-
 .tertiary:hover {
-  background: var(--dark-500, #333);
   border: 1px solid var(--primary-700, #704ecc);
+  background: var(--dark-500, #333);
 }
 
 .tertiary:focus-visible {
@@ -90,28 +84,26 @@ button {
 }
 
 .tertiary:active {
-  background: var(--primary-900, #382766);
   border: 1px solid var(--primary-700, #704ecc);
+  background: var(--primary-900, #382766);
 }
 
 .tertiary:disabled {
-  color: rgb(56 39 102 / 100%);
   border: 1px solid var(--primary-900, #382766);
+  color: rgba(56, 39, 102, 1);
 }
 
 a.link {
-  cursor: pointer;
-
-  padding: 6px 0;
-
-  font-size: 16px;
   color: var(--primary-500, #8c61ff);
+  font-size: 16px;
+  padding: 6px 0px;
+  cursor: pointer;
   text-decoration: none;
+  outline: none;
 }
-
 .link:focus-visible {
-  border: 2px solid var(--info-700, #2f68cc);
   border-radius: 130px;
+  border: 2px solid var(--info-700, #2f68cc);
 }
 
 a.link:active {
@@ -131,6 +123,24 @@ a.disabledLink {
 .secondary:active,
 .tertiary:active {
   transform: translateY(-2px);
+}
+.primary:disabled,
+.secondary:disabled,
+.tertiary:disabled {
+  transform: none;
+  cursor: not-allowed;
+}
+
+.primary:disabled .styleIcon {
+  fill: var(--color-light-900);
+}
+
+.secondary:disabled .styleIcon {
+  fill: var(--color-light-900);
+}
+
+.styleIcon {
+  fill: var(--color-light-100);
 }
 
 .fullWidth {
