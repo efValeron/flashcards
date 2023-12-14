@@ -8,7 +8,7 @@ import { Button } from './'
 
 const meta = {
   argTypes: {
-    variant: {
+      variant: {
       control: { type: 'radio' },
       options: ['primary', 'secondary', 'tertiary', 'link'],
     },
