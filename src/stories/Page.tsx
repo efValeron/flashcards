@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './page.css'
+// import './page.css'
 
 import { Header } from './Header'
 
@@ -37,7 +37,7 @@ export const Page: React.FC = () => {
         <ul>
           <li>
             Use a higher-level connected component. Storybook helps you compose such data from the
-            "args" of child component stories
+            args of child component stories
           </li>
           <li>
             Assemble data in the page component from your services. You can mock these services out
