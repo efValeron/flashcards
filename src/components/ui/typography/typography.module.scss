@@ -1,0 +1,109 @@
+p,
+h1,
+h2,
+h2,
+h3,
+div,
+span,
+a {
+  padding: 0;
+  margin: 0;
+}
+
+.large {
+  color: var(--Dark-900, #000);
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.h1 {
+  color: var(--Dark-900, #000);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.h2 {
+  color: var(--Dark-900, #000);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 133.333% */
+}
+
+.h3 {
+  color: var(--Dark-900, #000);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.body1 {
+  color: var(--Dark-900, #000);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.body2 {
+  color: var(--Dark-900, #000);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.subtitle1 {
+  color: var(--Dark-900, #000);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.subtitle2 {
+  color: var(--Dark-900, #000);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.caption {
+  color: var(--Dark-900, #000);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.overline {
+  color: var(--Dark-900, #000);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.link1 {
+  color: var(--Primary-500, #397df6);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration-line: underline;
+}
+
+.link2 {
+  color: var(--Primary-500, #397df6);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration-line: underline;
+}
