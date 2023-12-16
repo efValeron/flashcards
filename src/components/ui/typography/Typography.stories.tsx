@@ -77,7 +77,7 @@ export const AllTypography: Story = {
     return (
       <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '180px' }}>
         {testDataForStories.map(el => (
-          <Typography as={el.tag} variant={el.variant}>
+          <Typography as={el.tag} key={el.variant} variant={el.variant}>
             {el.text}
           </Typography>
         ))}
