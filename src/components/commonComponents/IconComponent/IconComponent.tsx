@@ -1,4 +1,4 @@
-import { CSSProperties, FC, createElement } from 'react'
+import React, { CSSProperties, FC, createElement } from 'react'
 
 import allIcons from '@/components/commonComponents/IconComponent/allIcons'
 import { IconName } from '@/components/commonComponents/IconComponent/types'

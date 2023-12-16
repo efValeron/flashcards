@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './header.css'
+// import './header.css'
 
 import { Button } from './Button'
 
