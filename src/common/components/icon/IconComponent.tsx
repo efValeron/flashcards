@@ -1,7 +1,7 @@
 import React, { CSSProperties, FC, createElement } from 'react'
 
-import allIcons from '@/components/commonComponents/IconComponent/allIcons'
-import { IconName } from '@/components/commonComponents/IconComponent/types'
+import allIcons from '@/components/icon/IconComponent/allIcons'
+import { IconName } from '@/components/icon/IconComponent/types'
 
 interface IProps {
   className?: string

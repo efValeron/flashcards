@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef, forwardRef, useState } from 'react'
 
-import { IconComponent } from '@/components/commonComponents/IconComponent/IconComponent'
+import { IconComponent } from '@/components/icon/IconComponent/IconComponent'
 
 import s from './input.module.scss'
 
