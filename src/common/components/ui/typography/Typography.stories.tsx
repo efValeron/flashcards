@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import { ElementType } from 'react'
 
-import { Typography, variantsTypography } from '@/components/ui/typography/Typography'
+import { Typography, variantsTypography } from '@/common/components/ui/typography/Typography'
 
 const meta = {
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
