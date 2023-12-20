@@ -1,12 +1,25 @@
-import { ReactNode } from 'react'
+import { ComponentPropsWithoutRef, ElementRef, ElementType, ReactNode, forwardRef } from 'react'
+
+import cn from 'classnames'
 
 import s from './card.module.scss'
 
-export type CardType = {
+type Props<T extends ElementType> = {
+  as?: T
   children?: ReactNode
-  className?: string
-}
+} & ComponentPropsWithoutRef<T>
 
-export const Card = ({ className, ...rest }: CardType) => {
-  return <div className={s.card + ' ' + `${className ?? ''}`} {...rest} />
-}
+export const Card = forwardRef(
+  <T extends ElementType = 'div'>(
+    { as, children, className, ...restProps }: Props<T>,
+    ref: ElementRef<T>
+  ) => {
+    const Component: ElementType = as || 'div'
+
+    return (
+      <Component className={cn(s.card, className)} ref={ref} {...restProps}>
+        {children}
+      </Component>
+    )
+  }
+)
