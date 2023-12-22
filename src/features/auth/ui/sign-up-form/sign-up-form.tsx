@@ -23,7 +23,11 @@ const loginSchema = z
     path: ['confirmPassword'],
   })
 
-export const SignUpForm = () => {
+type Props = {
+  onSubmit?: (data: FormValues) => void
+}
+
+export const SignUpForm = ({ onSubmit }: Props) => {
   const {
     control,
     formState: { errors },
@@ -37,14 +41,14 @@ export const SignUpForm = () => {
     resolver: zodResolver(loginSchema),
   })
 
-  const onSubmit = (data: FormValues) => {
-    console.log(data)
+  const handleOnSubmit = (data: FormValues) => {
+    onSubmit?.(data)
   }
 
   return (
     <Card className={s.card}>
       <Typography variant={'large'}>Sign Up</Typography>
-      <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
+      <form className={s.form} onSubmit={handleSubmit(handleOnSubmit)}>
         <DevTool control={control} />
         <ControlledInput
           className={s.formInput}
