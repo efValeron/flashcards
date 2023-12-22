@@ -1,0 +1,24 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2.25rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.69rem;
+
+  &.formInput {
+    width: 21.75rem;
+  }
+}
+
+.or {
+  margin-top: 1.25rem;
+}
+
+.link {
+  margin-top: 0.69rem;
+}
