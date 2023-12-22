@@ -1,11 +1,15 @@
 import { useForm } from 'react-hook-form'
 
 import { Button } from '@/common/components/ui/button'
+import { Card } from '@/common/components/ui/card'
 import { ControlledCheckbox } from '@/common/components/ui/controlled/controlled-checkbox/controlled-checkbox'
-import { Input } from '@/common/components/ui/input'
+import { ControlledInput } from '@/common/components/ui/controlled/controlled-input/controlled-input'
+import { Typography } from '@/common/components/ui/typography'
 import { DevTool } from '@hookform/devtools'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
+
+import s from './login-form.module.scss'
 
 type FormValues = z.infer<typeof loginSchema>
 
@@ -15,12 +19,15 @@ const loginSchema = z.object({
   rememberMe: z.boolean().optional(),
 })
 
-export const LoginForm = () => {
+type Props = {
+  onSubmit?: (data: FormValues) => void
+}
+
+export const LoginForm = ({ onSubmit }: Props) => {
   const {
     control,
     formState: { errors },
     handleSubmit,
-    register,
   } = useForm<FormValues>({
     defaultValues: {
       email: '',
@@ -30,27 +37,44 @@ export const LoginForm = () => {
     resolver: zodResolver(loginSchema),
   })
 
-  const onSubmit = (data: FormValues) => {
-    console.log(data)
+  const handleOnSubmit = (data: FormValues) => {
+    onSubmit?.(data)
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <DevTool control={control} />
-      <Input
-        {...register('email')}
-        error={!!errors.email?.message}
-        errorMessage={errors.email?.message}
-        label={'email'}
-      />
-      <Input
-        {...register('password')}
-        error={!!errors.password?.message}
-        errorMessage={errors.password?.message}
-        label={'password'}
-      />
-      <ControlledCheckbox control={control} name={'rememberMe'} />
-      <Button type={'submit'}>Submit</Button>
-    </form>
+    <Card className={s.card}>
+      <Typography variant={'large'}>Sign In</Typography>
+      <form className={s.form} onSubmit={handleSubmit(handleOnSubmit)}>
+        <DevTool control={control} />
+        <ControlledInput
+          className={s.formInput}
+          control={control}
+          error={!!errors.email?.message}
+          errorMessage={errors.email?.message}
+          label={'Email'}
+          name={'email'}
+        />
+        <ControlledInput
+          className={s.formInput}
+          control={control}
+          error={!!errors.password?.message}
+          errorMessage={errors.password?.message}
+          label={'Password'}
+          name={'password'}
+          variant={'password'}
+        />
+        <ControlledCheckbox control={control} name={'rememberMe'} />
+        <Typography className={s.forgotPassword} variant={'body2'}>
+          Forgot Password?
+        </Typography>
+        <Button type={'submit'}>Submit</Button>
+      </form>
+      <Typography className={s.or} variant={'body2'}>
+        Don&apos;t have an account?
+      </Typography>
+      <Typography className={s.link} variant={'link1'}>
+        Sign Up
+      </Typography>
+    </Card>
   )
 }

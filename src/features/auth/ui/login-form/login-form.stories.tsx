@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
+import { action } from '@storybook/addon-actions'
+
 import { LoginForm } from './'
 
 const meta = {
@@ -11,4 +13,8 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {}
+export const Primary: Story = {
+  args: {
+    onSubmit: action('Handling submit'),
+  },
+}
