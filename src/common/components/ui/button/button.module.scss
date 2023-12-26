@@ -119,11 +119,13 @@ a.disabledLink {
   color: var(--primary-900, #382766);
 }
 
-.primary:active,
-.secondary:active,
-.tertiary:active {
-  transform: translateY(-2px);
-}
+//.primary:active,
+//.secondary:active,
+//.tertiary:active {
+//  transform: translateY(-2px);
+//}
+
+
 .primary:disabled,
 .secondary:disabled,
 .tertiary:disabled {
