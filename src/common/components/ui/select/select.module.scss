@@ -1,0 +1,70 @@
+button {
+  all: unset;
+}
+
+.SelectTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  min-width: 210px;
+  padding: 4px;
+
+  border: 1px solid var(--color-dark-100);
+  border-radius: 2px;
+}
+
+.SelectTrigger:focus-visible {
+  border-color: var(--color-info-700);
+}
+
+.SelectTrigger:hover {
+  background-color: var(--color-dark-500);
+}
+
+.SelectTrigger:disabled {
+  background-color: transparent;
+  border: 1px solid var(--color-dark-300);
+}
+
+.SelectItem {
+  cursor: pointer;
+  padding: 4px;
+  outline: none;
+
+  &:hover {
+    background-color: var(--color-accent-900);
+  }
+}
+
+.SelectContent {
+  min-width: 210px;
+  border: 1px solid var(--color-dark-300);
+}
+
+.Icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.IconStyle {
+  fill: var(--color-light-100);
+}
+
+div.disabledText {
+  color: var(--color-dark-300);
+}
+
+.iconDisabled {
+  fill: var(--color-dark-300);
+}
+
+span.labelStyle {
+  color: var(--color-dark-100);
+}
+
+span.disabledLabel {
+  color: var(--color-dark-300);
+}
